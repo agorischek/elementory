@@ -6,7 +6,7 @@ If you find yourself doing this:
 ```js
 $(this).html("<a class='" + displayType + "' id='welcome' href='" + profileURL + "'>Hello, " + name + "</a>");
 ```
-Sculptjs lets you do this instead:
+SculptJS lets you do this instead:
 ```js
 $(this).html(sculpt({
     element:"a",
@@ -20,7 +20,7 @@ $(this).html(sculpt({
 
 Grab the source from [here](https://raw.githubusercontent.com/agorischek/sculptjs/master/sculpt.min.js) and toss it in your project.
 
-Just pass an object into `sculpt()`, including an `element` property for the HTML tag and `content` property for the display text. All other properties will be added to the HTML element as attributes.
+Just pass an object into `sculpt()`, including an `element` property for the HTML tag and a `content` property for the display text. All other properties will be added to the HTML element as attributes.
 
 So this:
 ```js
@@ -30,7 +30,7 @@ sculpt({
     id:"Hello"
 });
 ```
-Generates this:
+...generates this:
 ```html
 <div id="Hello">Hello World!</div>
 ```
