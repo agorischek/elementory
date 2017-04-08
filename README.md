@@ -16,6 +16,24 @@ $(this).html(sculpt({
     href:profileURL
 }));
 ```
+## Usage
+
+Grab the source from [here](https://raw.githubusercontent.com/agorischek/sculptjs/master/sculpt.min.js) and toss it in your project.
+
+Just pass an object into `sculpt()`, including an `element` property for the HTML tag and `content` property for the display text. All other properties will be added to the HTML element as attributes.
+
+So this:
+```js
+sculpt({
+    element:"div",
+    content:"Hello World!",
+    id:"Hello"
+});
+```
+Generates this:
+```html
+<div id="Hello">Hello World!</div>
+```
     
 ## Benefits
 * No need to fuss with all those extra quotation marks
