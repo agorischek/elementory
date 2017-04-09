@@ -20,7 +20,7 @@ $(this).html(element({
 ## Installation
 Grab the source from [here](https://raw.githubusercontent.com/agorischek/elementory/master/elementory.min.js) and toss it in your project.
 ```
-https://raw.githubusercontent.com/agorischek/elementory/dev/elementory.min.js
+https://raw.githubusercontent.com/agorischek/elementory/master/elementory.min.js
 ```
 
 ## Basic Usage
