@@ -10,13 +10,23 @@
                     tag:"div",
                     content:["1","2","3"],
                     class:"test",
-                    id:"test"
                 }));
                 $("#test").append(element({
                     tag:"div",
                     content:"4",
                     class:"test",
                     id:"test"
+                }));
+                $("#test").append(element("div","5"));
+                $("#test").append(element("div","6",{
+                    class:"test"
+                }));
+                $("#test").append(element({
+                    content:["7"],
+                    class:"test"
+                }));
+                $("#test").append(element({
+                    class:"test"
                 }));
             })
         </script>
