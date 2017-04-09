@@ -2,7 +2,7 @@
 Elementory is a tiny library for constructing HTML elements with JavaScript.
  
 ## Before & After
-If you find yourself doing this:
+If you find yourself getting tripped up on quotation marks while doing this:
 ```js
 $(this).html("<a class='" + displayType + "' id='welcome' href='" + profileURL + "'>Hello, " + name + "</a>");
 ```
@@ -19,36 +19,36 @@ $(this).html(element({
 
 ## Installation
 Grab the source from [here](https://raw.githubusercontent.com/agorischek/elementory/master/elementory.min.js) and toss it in your project.
+```
+https://raw.githubusercontent.com/agorischek/elementory/dev/elementory.min.js
+```
 
 ## Basic Usage
 The simplest usage is passing a `tag` and `content`:
 ```js
 element("div","Hello World!");
 ```
-…constructs:
 ```html
 <div>Hello World!</div>
 ```
 
 ## Adding attributes
-HTML attributes can be passed in as an object:
+HTML attributes can be passed in as properties of an object:
 ```js
 element("a","Confirm",{
     class:"important",
     id:"confirm-button"
 });
 ```
-…constructs:
 ```html
 <a class="important" id="confirm-button">Confirm</a>
 ```
 
 ## Constructing multiple elements
-Multiple elements can be created with one call by passing an array as the `content` parameter.
+Multiple elements can be created with one call, by passing an array as the `content` parameter.
 ```js
 element("li",["Apples","Bananas","Oranges"],{class:"unchecked"});
 ```
-…constructs:
 ```html
 <li class="unchecked">Apples</li><li class="unchecked">Bananas</li><li class="unchecked">Oranges</li>
 ```
@@ -63,7 +63,6 @@ element({
     id:"next-instruction"
 });
 ```
-…constructs:
 ```html
 <span class="left" id="next-instruction">Turn Left</span>
 ```
@@ -73,7 +72,6 @@ If not specified, `element()` will default to a `div` tag and `""` as content:
 ```js
 element();
 ```
-…constructs:
 ```html
 <div></div>
 ``` 
