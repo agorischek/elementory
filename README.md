@@ -1,41 +1,85 @@
-# SculptJS
-SculptJS is a tiny library for building HTML elements from JavaScript objects.
+# Elementory
+Elementory is a tiny library for constructing HTML elements with JavaScript.
  
 ## Before & After
 If you find yourself doing this:
 ```js
 $(this).html("<a class='" + displayType + "' id='welcome' href='" + profileURL + "'>Hello, " + name + "</a>");
 ```
-SculptJS lets you do this instead:
+Elementory lets you do this instead:
 ```js
-$(this).html(sculpt({
-    element:"a",
+$(this).html(element({
+    tag:"a",
     content:"Hello, " + name,
     class:displayType,
     id:"welcome",
     href:profileURL
 }));
 ```
-## Usage
 
-Grab the source from [here](https://raw.githubusercontent.com/agorischek/sculptjs/master/sculpt.min.js) and toss it in your project.
+## Installation
+Grab the source from [here](https://raw.githubusercontent.com/agorischek/elementory/master/elementory.min.js) and toss it in your project.
 
-Just pass an object into `sculpt()`, including an `element` property for the HTML tag and a `content` property for the display text. All other properties will be added to the HTML element as attributes.
-
-So this:
+## Basic Usage
+The simplest usage is passing a `tag` and `content`:
 ```js
-sculpt({
-    element:"div",
-    content:"Hello World!",
-    id:"Hello"
+element("div","Hello World!");
+```
+…constructs:
+```html
+<div>Hello World!</div>
+```
+
+## Adding attributes
+HTML attributes can be passed in as an object:
+```js
+element("a","Confirm",{
+    class:"important",
+    id:"confirm-button"
 });
 ```
-...generates this:
+…constructs:
 ```html
-<div id="Hello">Hello World!</div>
+<a class="important" id="confirm-button">Confirm</a>
 ```
-    
+
+## Constructing multiple elements
+Multiple elements can be created with one call by passing an array as the `content` parameter.
+```js
+element("li",["Apples","Bananas","Oranges"],{class:"unchecked"});
+```
+…constructs:
+```html
+<li class="unchecked">Apples</li><li class="unchecked">Bananas</li><li class="unchecked">Oranges</li>
+```
+
+## Alternate notation
+As a stylistic alternative, all properties can be passed in as a single object—The `tag` and `content` properties are interpreted the same as the above standalone arguments, and all other properties are added to the element as attributes:
+```js
+element({
+    tag:"span",
+    content:"Turn Left",
+    class:"left",
+    id:"next-instruction"
+});
+```
+…constructs:
+```html
+<span class="left" id="next-instruction">Turn Left</span>
+```
+
+## Defaults
+If not specified, `element()` will default to a `div` tag and `""` as content:
+```js
+element();
+```
+…constructs:
+```html
+<div></div>
+``` 
+
 ## Benefits
-* No need to fuss with all those extra quotation marks
-* Way easier to comment out individual pieces
-* No dependencies
+Elementory removes the messiness of manually concatenating strings and variables to produce HTML—and it makes it far easier to comment out or remove individual pieces.
+
+## What's the name mean?
+It's a portmanteau of "element" and "factory", as well as a homophone of "elementary".
