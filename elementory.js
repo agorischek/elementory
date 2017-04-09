@@ -5,7 +5,7 @@ function element(object){
     var html = "";
     for (var property in object){
         if (object.hasOwnProperty(property)) {
-            if(property != "tag" && property != "content"){
+            if(property !== "tag" && property !== "content"){
                 attributes = attributes.concat(" " + property + "=\"" + object[property] + "\"");
             }
         }
