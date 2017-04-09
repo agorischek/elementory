@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <div id="test">test</div>
+        <script src="https://code.jquery.com/jquery-3.2.0.min.js"></script>
+        <script src="../sculpt.js"></script>
+        <script>
+            $(function(){
+                $("#test").html(sculpt({
+                    element:"div",
+                    content:["1","2","3"],
+                    class:"test",
+                    id:"test"
+                }))   
+            })
+        </script>
+    </body>
+</html>
