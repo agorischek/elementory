@@ -1,12 +1,51 @@
-function element(object){
-    var tag = object.tag;
-    var content = object.content;
+function element(requiredPropertiesOrTag,optionalContent,optionalAttributes){
+    var properties = "";
+    var tag = "";
+    var content = "";
     var attributes = "";
     var html = "";
-    for (var property in object){
-        if (object.hasOwnProperty(property)) {
-            if(property !== "tag" && property !== "content"){
-                attributes = attributes.concat(" " + property + "=\"" + object[property] + "\"");
+    var defaultTag = "div";
+    var defaultContent = "";
+    if(typeof(requiredPropertiesOrTag) === "object"){
+        properties = requiredPropertiesOrTag;
+        if(properties.tag){
+            tag = properties.tag;
+        }
+        else{
+            tag = defaultTag;
+        }
+        if(properties.content){
+            content = properties.content;
+        }
+        else{
+            content = defaultContent;
+        }
+        for (var property in properties){
+            if (properties.hasOwnProperty(property)) {
+                if(property !== "tag" && property !== "content"){
+                    attributes = attributes.concat(" " + property + "=\"" + properties[property] + "\"");
+                }
+            }
+        }
+    }
+    else{
+        if(requiredPropertiesOrTag){
+            tag = requiredPropertiesOrTag;
+        }
+        else{
+            tag = defaultTag;
+        }
+        if(optionalContent){
+            content = optionalContent;
+        }
+        else{
+            content = defaultContent;
+        }
+        if(optionalAttributes){
+            for (var attribute in optionalAttributes){
+                if (optionalAttributes.hasOwnProperty(attribute)) {
+                    attributes = attributes.concat(" " + attribute + "=\"" + optionalAttributes[attribute] + "\"");
+                }
             }
         }
     }
