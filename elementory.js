@@ -54,7 +54,7 @@ function element(requiredPropertiesOrTag,optionalContent,optionalAttributes){
             }
         }
     }
-    var openingTag = "<" + tag + " " + attributes + ">";
+    var openingTag = "<" + tag + attributes + ">";
     var closingTag = "</" + tag + ">";
 //  If content is an array, then process it item by item.
     if(Array.isArray(content)){
