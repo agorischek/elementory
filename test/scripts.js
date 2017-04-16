@@ -47,9 +47,14 @@ function runCase(id){
     var expected = tests[id]["expected"];
     var output = tests[id]["script"]();
     var result = renderResult(checkResult(expected,output))
-    $("#" + id + " .test-function").html(script)
-    $("#" + id + " .test-expected").html(escape(expected));
-    $("#" + id + " .test-output").html(escape(output));            
-    $("#" + id + " .test-result").html(result);
+    var info = tests[id]["number"] + ": " + tests[id]["title"];
+    var target = "#" + id
+    $(target + " .test-function").html(script)
+    $(target + " .test-expected").html(escape(expected));
+    $(target + " .test-output").html(escape(output));            
+    $(target + " .test-result").html(result);
+    $(target + " .test-info").html(info);
+
+    
 }
         
