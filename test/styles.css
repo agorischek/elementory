@@ -30,7 +30,15 @@ h1{
 }
 .test-result{
     width:100px
-} @media (max-width: 900px) {
+} 
+
+.label{
+    font-size: 80%;
+    font-weight: 700;
+    margin-bottom:7px;
+}
+
+@media (max-width: 900px) {
     .test-holder > *{
         min-width:250px;
         max-width:100%;
