@@ -17,6 +17,7 @@ h1{
     max-width: 100%;
     flex-wrap: wrap;
 }
+
 .test-holder > *{
     background-color:#C7C7C7;
     margin:10px;
@@ -25,9 +26,11 @@ h1{
     flex:1;
     overflow:scroll;
 }
+
 .test-function, .test-expected, .test-output{
     flex:1;
 }
+
 .test-result{
     width:100px
 } 
