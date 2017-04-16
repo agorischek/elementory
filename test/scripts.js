@@ -1,7 +1,11 @@
 $(function(){
     for(test in tests){
         $("#tests").append('<div id="' + test + '" class="test-holder"></div>')
-        $("#" + test).html('<pre><code class="javascript test-function"></pre><pre></code><code class="html test-expected"></code></pre><pre><code class="html test-output"></code></pre><code class="test-result"></code></pre>')
+        var target = "#" + test
+        $(target).append('<pre><div class="label">Test</div><code class="test-info"></code><div class="label">Result</div><code class="test-result"></code></pre>')
+        $(target).append('<pre><div class="label">Function</div><code class="javascript test-function"></code></pre>')
+        $(target).append('<pre><div class="label">Expected</div><code class="html test-expected"></code></pre>')
+        $(target).append('<pre><div class="label">Output</div><code class="html test-output"></code></pre>')
         runCase(test);
     }
 //    hljs.configure({useBR: true});
