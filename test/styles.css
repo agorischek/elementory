@@ -2,12 +2,6 @@ body{
     font-family: monospace;
     font-size: 16px;
 }
-#headers{
-    display:flex;
-    width:100%;
-}
-#headers > *{
-    flex:1;
     text-align: center;
 }
 .test-holder{
