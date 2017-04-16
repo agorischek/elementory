@@ -3,132 +3,20 @@
     <head>
         <title>Elementory Tests</title>
         <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/styles/default.min.css">
-        <style>
-            body{
-                font-family: monospace;
-                font-size: 16px;
-            }
-            #headers{
-                display:flex;
-                width:100%;
-            }
-            #headers *{
-                flex:1;
-                text-align: center;
-            }
-            .test-holder{
-                background-color:#E7E7E7;
-                display: flex;
-                flex-direction: row;
-                height:200px;
-                margin:10px 5px;
-                padding:5px;
-                max-width: 100%;
-            }
-            .test-holder *{
-                background-color:#C7C7C7;
-                margin:10px;
-                padding:10px;
-                overflow:scroll;
-            }
-            .test-function, .test-expected, .test-output{
-                flex:1;
-            }
-            .test-result{
-                width:100px
-            } 
-        </style>
+        <link rel="stylesheet" href="styles.css" type="text/css">
+        <meta name="viewport" content ="width=device-width,initial-scale=1,user-scalable=yes" />
     </head>
     <body>
-        <script src="https://code.jquery.com/jquery-3.2.0.min.js"></script>
-        <script src="../elementory.js"></script>
-        
-        <script>
-                function escape(input){
-                    return $(input).text(input).html();
-                }
-                
-                function chopFunction(input){
-                    var regex = /element[.\n\r]?tag/
-                    return regex.exec(input)
-                }
-            
-                function checkResult(expected,actual){
-                    console.log(expected)
-                    console.log(actual)
-                    if(expected==actual){
-                        return true
-                    }
-                    else{
-                        return false
-                    }
-                }
-                
-                function renderResult(result){
-                    if (result == true){
-                        return "Pass"
-                    }
-                    else if(result == false){
-                        return "Fail"
-                    }
-                    else{
-                        return "Huh?"
-                    }
-                }
-            
-                function runCase(id){ 
-                    var script = testFunction.toString()
-                    var output = testFunction();
-                    var result = renderResult(checkResult(expected,output))
-                    $("#test-" + id + " .test-function").html(script)
-                    $("#test-" + id + " .test-expected").html(escape(expected));
-                    $("#test-" + id + " .test-output").html(escape(output));            
-                    $("#test-" + id + " .test-result").html(result);
-                }
-        
-        </script>
 
-        <div id="headers">
-            <pre>Function</pre>
-            <pre>Expected</pre>
-            <pre>Output</pre>
-            <pre>Result</pre>
-        </div>
+        <h1>Elementory Tests</h1>
         
-        <div id="test-1" class="test-holder">
-            <pre class="test-function"></pre>
-            <code class="test-expected"></code>
-            <code class="test-output"></code>
-            <pre class="test-result"></pre>   
-            <script>
-                function testFunction(){
-                    return element({
-                        tag:"div",
-                        content:["Apples","Bananas","Oranges"],
-                        class:"test",
-                    });
-                }
-                var expected = '<div class="test">Apples</div><div class="test">Bananas</div><div class="test">Oranges</div>'
-                runCase(1);
-            </script>
-        </div>
+        <div id="tests"></div>
         
-        <div id="test-2" class="test-holder">
-            <pre class="test-function"></pre>
-            <code class="test-expected"></code>
-            <code class="test-output"></code>
-            <pre class="test-result"></pre>   
-            <script>
-                function testFunction(){
-                    return element({
-                        tag:"span",
-                        content:"Hello"
-                    });
-                }
-                var expected = '<span>Hello</span>'
-                runCase(2);
-            </script>
-        </div>
+        <script src="https://code.jquery.com/jquery-3.2.0.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/highlight.min.js"></script>
+        <script src="../elementory.js"></script>
+        <script src="scripts.js"></script>
+        <script src="tests.js"></script>
 
     </body>
 </html>
