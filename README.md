@@ -24,7 +24,7 @@ https://raw.githubusercontent.com/agorischek/elementory/master/elementory.min.js
 ```
 
 ## Basic Usage
-The simplest usage is passing a `tag` and `content`:
+The simplest usage is passing `tag` and `content` arguments:
 ```js
 element("div","Hello World!");
 ```
@@ -33,7 +33,7 @@ element("div","Hello World!");
 ```
 
 ## Adding attributes
-HTML attributes can be passed in as properties of an object:
+HTML attributes can be passed in as object properties of the `attributes` argument:
 ```js
 element("a","Confirm",{
     class:"important",
@@ -51,6 +51,15 @@ element("li",["Apples","Bananas","Oranges"],{class:"unchecked"});
 ```
 ```html
 <li class="unchecked">Apples</li><li class="unchecked">Bananas</li><li class="unchecked">Oranges</li>
+```
+
+## Self-closing elements
+Any element can be constructed with a self-closing tag by setting `content` to `false`.
+```js
+element("input",false,{class:"editable"});
+```
+```html
+<input class="editable" />
 ```
 
 ## Alternate notation
