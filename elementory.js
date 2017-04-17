@@ -2,11 +2,13 @@
 function element(requiredPropertiesOrTag,optionalContent,optionalAttributes){
     var properties = "";
     var tag = "";
-    var content = "";
+    var content = null;
     var attributes = "";
     var html = "";
     var defaultTag = "div";
     var defaultContent = "";
+    var openingTag = "";
+    var closingTag = "";
 //  If the first argument is an object, then we proceed based on its properties.
     if(typeof(requiredPropertiesOrTag) === "object"){
         properties = requiredPropertiesOrTag;
@@ -17,7 +19,7 @@ function element(requiredPropertiesOrTag,optionalContent,optionalAttributes){
         else{
             tag = defaultTag;
         }
-        if(properties.content){
+        if(properties.content || properties.content === false){
             content = properties.content;
         }
         else{
@@ -40,7 +42,7 @@ function element(requiredPropertiesOrTag,optionalContent,optionalAttributes){
         else{
             tag = defaultTag;
         }
-        if(optionalContent){
+        if(optionalContent || optionalContent === false){
             content = optionalContent;
         }
         else{
@@ -54,17 +56,29 @@ function element(requiredPropertiesOrTag,optionalContent,optionalAttributes){
             }
         }
     }
-    var openingTag = "<" + tag + attributes + ">";
+//  If content is false, create a self-closing element.
+    if(content === false){
+        openingTag = "<" + tag + attributes + " />";
+    }
+//  Otherwise, create a normal opening tag
+    else{
+        openingTag = "<" + tag + attributes + ">";
+    }
     var closingTag = "</" + tag + ">";
 //  If content is an array, then process it item by item.
+
     if(Array.isArray(content)){
         for (var index = 0; index < content.length; ++index) {
             html = html.concat(openingTag + content[index] + closingTag);
         }
     }
+//  If content is false, then the entire element is just the opening tag.
+    else if(content === false){
+        html = openingTag
+    }
     else{
         html = openingTag + content + closingTag;
-    }
+    };
 //  Return the final built product.
     return html;
 }
