@@ -24,7 +24,7 @@ https://raw.githubusercontent.com/agorischek/elementory/master/elementory.min.js
 ```
 
 ## Basic Usage
-The simplest usage is passing `tag` and `content` arguments:
+The simplest use is passing the `tag` and `content` arguments:
 ```js
 element("div","Hello World!");
 ```
@@ -45,7 +45,7 @@ element("a","Confirm",{
 ```
 
 ## Constructing multiple elements
-Multiple elements can be created with one call, by passing an array as the `content` parameter.
+Multiple elements can be created with one call, by passing an array as the `content` argument.
 ```js
 element("li",["Apples","Bananas","Oranges"],{class:"unchecked"});
 ```
@@ -54,7 +54,7 @@ element("li",["Apples","Bananas","Oranges"],{class:"unchecked"});
 ```
 
 ## Self-closing elements
-Any element can be constructed with a self-closing tag by setting `content` to `false`.
+Any element can be constructed with a self-closing tag by setting the `content` argument to `false`.
 ```js
 element("input",false,{class:"editable"});
 ```
