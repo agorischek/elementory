@@ -59,8 +59,6 @@ function runCase(id){
     $(target + " .test-expected").html(escape(expected));
     $(target + " .test-output").html(escape(output));            
     $(target + " .test-result").html(result);
-    $(target + " .test-info").html(info);
-
-    
+    $(target + " .test-info").html(info);    
 }
         
