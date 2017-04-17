@@ -13,7 +13,13 @@ $(function(){
 })
 
 function escape(input){
-    return $(input).text(input).html();
+    var escaped = input;
+    escaped = escaped.replace(/&/g, "&amp;");
+    escaped = escaped.replace(/</g, "&lt;");
+    escaped = escaped.replace(/>/g, "&gt;");
+    escaped = escaped.replace(/"/g, "&quot;");
+    escaped = escaped.replace(/'/g, "&apos;");
+    return escaped;    
 }
 
 function chopFunction(input){
@@ -53,8 +59,6 @@ function runCase(id){
     $(target + " .test-expected").html(escape(expected));
     $(target + " .test-output").html(escape(output));            
     $(target + " .test-result").html(result);
-    $(target + " .test-info").html(info);
-
-    
+    $(target + " .test-info").html(info);    
 }
         
