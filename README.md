@@ -53,6 +53,15 @@ element("li",["Apples","Bananas","Oranges"],{class:"unchecked"});
 <li class="unchecked">Apples</li><li class="unchecked">Bananas</li><li class="unchecked">Oranges</li>
 ```
 
+## Self-closing elements
+Any element can be constructed with a self-closing tag by setting `content` to `false`.
+```js
+element("input",false,{class:"editable"});
+```
+```html
+<input class="editable" />
+```
+
 ## Alternate notation
 As a stylistic alternative, all properties can be passed in as a single object—The `tag` and `content` properties are interpreted the same as the above standalone arguments, and all other properties are added to the element as attributes:
 ```js
