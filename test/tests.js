@@ -47,4 +47,16 @@ tests = {
         expected:'<h1></h1>',
         script:function(){return element("h1");}
     },
+    test9:{
+        number:"9",
+        title:"Self-closing as argument",
+        expected:'<input class="editable" />',
+        script:function(){return element("input",false,{class:"editable"});}
+    },
+    test10:{
+        number:"10",
+        title:"Self-closing in object",
+        expected:'<input class="editable" />',
+        script:function(){return element({tag:"input",content:false,class:"editable"});}
+    }
 }
