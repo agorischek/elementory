@@ -1,5 +1,5 @@
 var assert = require("assert");
-var element = require("../elementory.min.js")
+var element = require("../elementory.js")
 
 it("should create an element with content by passing two arguments", function() {
   assert.equal(
