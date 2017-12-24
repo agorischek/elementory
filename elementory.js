@@ -82,3 +82,8 @@ var element = function(requiredPropertiesOrTag,optionalContent,optionalAttribute
 //  Return the final built product.
     return html;
 }
+
+// Define export if running in a Node environment; do nothing if in the browser
+if (typeof module !== "undefined" && typeof module.exports !== "undefined"){
+    module.exports = element;
+}
