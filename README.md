@@ -1,5 +1,6 @@
 # Elementory
 Elementory is a tiny library for constructing HTML elements with JavaScript.
+[![Build Status](https://img.shields.io/travis/agorischek/elementory.svg)](https://travis-ci.org/agorischek/elementory)
  
 ## Before & After
 If you find yourself getting tripped up on quotation marks while doing this:
