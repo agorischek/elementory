@@ -25,8 +25,8 @@ For use in the browser:
 <script src="https://unpkg.com/elementory/elementory.min.js"></script>
 ```
 For use in Node:
-```sh
-npm install elementory
+```bash
+$ npm install elementory
 ```
 ```js
 var element = require("elementory")
