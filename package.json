@@ -8,7 +8,7 @@
   },
   "scripts": {
     "test": "mocha",
-    "build": "uglifyjs elementory.js -o elementory.min.js"
+    "build": "gulp build"
   },
   "repository": {
     "type": "git",
