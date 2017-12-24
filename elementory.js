@@ -1,5 +1,5 @@
-//  The element function cal be called either with a single object including all relevant properties as the first argument, or with the HTML tag as the first argument, the content as the second, and an object of attributes as the third.
-function element(requiredPropertiesOrTag,optionalContent,optionalAttributes){
+//  The element function can be called either with a single object including all relevant properties as the first argument, or with the HTML tag as the first argument, the content as the second, and an object of attributes as the third.
+var element = function(requiredPropertiesOrTag,optionalContent,optionalAttributes){
     var properties = "";
     var tag = "";
     var content = null;
