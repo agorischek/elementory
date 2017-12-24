@@ -20,9 +20,13 @@ $(this).html(element({
 ```
 
 ## Installation
-Grab the source from [here](https://raw.githubusercontent.com/agorischek/elementory/master/elementory.min.js) and toss it in your project.
+For use in the browser:
+```html
+<script src="https://unpkg.com/elementory/elementory.min.js"></script>
 ```
-https://raw.githubusercontent.com/agorischek/elementory/master/elementory.min.js
+For use in Node:
+```sh
+npm install elementory
 ```
 
 ## Basic Usage
