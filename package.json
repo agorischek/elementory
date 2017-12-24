@@ -1,0 +1,27 @@
+{
+  "name": "elementory",
+  "version": "1.0.0",
+  "description": "A tiny library for constructing HTML elements with JavaScript",
+  "main": "elementory.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha",
+    "build": "uglifyjs elementory.js -o elementory.min.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://agorischek@github.com/agorischek/elementory.git"
+  },
+  "author": "Alex Gorischek",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/agorischek/elementory/issues"
+  },
+  "homepage": "http://elementory.io",
+  "devDependencies": {
+    "mocha": "^4.0.1",
+    "uglify-js": "^3.3.0"
+  }
+}
