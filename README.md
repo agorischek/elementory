@@ -28,6 +28,9 @@ For use in Node:
 ```sh
 npm install elementory
 ```
+```js
+var element = require("elementory")
+```
 
 ## Basic Usage
 The simplest use is passing the `tag` and `content` arguments:
