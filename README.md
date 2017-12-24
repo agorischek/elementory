@@ -2,6 +2,8 @@
 Elementory is a tiny library for constructing HTML elements with JavaScript.
 
 [![Build Status](https://img.shields.io/travis/agorischek/elementory.svg)](https://travis-ci.org/agorischek/elementory)
+[![Version](https://img.shields.io/npm/v/elementory.svg)](https://www.npmjs.com/package/elementory)
+[![License](https://img.shields.io/github/license/agorischek/elementory.svg)](https://github.com/agorischek/elementory/blob/master/LICENSE)
  
 ## Before & After
 If you find yourself getting tripped up on quotation marks while doing this:
@@ -20,9 +22,16 @@ $(this).html(element({
 ```
 
 ## Installation
-Grab the source from [here](https://raw.githubusercontent.com/agorischek/elementory/master/elementory.min.js) and toss it in your project.
+For use in the browser:
+```html
+<script src="https://unpkg.com/elementory/elementory.min.js"></script>
 ```
-https://raw.githubusercontent.com/agorischek/elementory/master/elementory.min.js
+For use in Node:
+```bash
+$ npm install elementory
+```
+```js
+var element = require("elementory")
 ```
 
 ## Basic Usage
