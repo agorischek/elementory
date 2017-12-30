@@ -8,17 +8,17 @@ Elementory is a tiny library for constructing HTML elements with JavaScript.
 ## Before & After
 If you find yourself getting tripped up on quotation marks while doing this:
 ```js
-$(this).html("<a class='" + displayType + "' id='welcome' href='" + profileURL + "'>Hello, " + name + "</a>");
+var html = "<a class='" + displayType + "' id='welcome' href='" + profileURL + "'>Hello, " + name + "</a>";
 ```
 Elementory lets you do this instead:
 ```js
-$(this).html(element({
+var html = element({
     tag:"a",
     content:"Hello, " + name,
     class:displayType,
     id:"welcome",
     href:profileURL
-}));
+});
 ```
 
 ## Installation
@@ -28,10 +28,10 @@ For use in the browser:
 ```
 For use in Node:
 ```bash
-$ npm install elementory
+$ npm install -S elementory
 ```
 ```js
-var element = require("elementory")
+var element = require("elementory");
 ```
 
 ## Basic Usage
