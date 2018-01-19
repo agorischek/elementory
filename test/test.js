@@ -94,6 +94,10 @@ describe("Documentation", function(){
     doc.markup.no("li li")
   })
 
+  it("should not have any curly quotes in code snippets", function(){
+    doc.code.no(["“","”"])
+  })
+
   it("should not have the library's name in lower-case form in the copy", function(){
     doc.copy.no("elementory")
   })

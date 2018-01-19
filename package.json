@@ -25,7 +25,7 @@
     "gulp-mocha": "^4.3.1",
     "gulp-rename": "^1.2.2",
     "gulp-uglify": "^3.0.0",
-    "markunit": "^0.3.0",
+    "markunit": "^0.3.1",
     "mocha": "^4.0.1",
     "uglify-js": "^3.3.0"
   }
