@@ -21,12 +21,11 @@
   },
   "homepage": "http://elementory.io",
   "devDependencies": {
-    "gulp": "^3.9.1",
-    "gulp-mocha": "^4.3.1",
-    "gulp-rename": "^1.2.2",
-    "gulp-uglify": "^3.0.0",
+    "gulp-mocha": "^6.0.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-uglify": "^3.0.1",
     "markunit": "^0.4.3",
-    "mocha": "^4.0.1",
-    "uglify-js": "^3.3.0"
+    "mocha": "^4.1.0",
+    "uglify-js": "^3.4.6"
   }
 }
