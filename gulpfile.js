@@ -12,8 +12,8 @@ gulp.task("build", function(){
 });
 
 gulp.task("test", function(){
-    gulp.src("test/test.js")
+    return gulp.src("test/test.js")
         .pipe(mocha())
 })
 
-gulp.task("default", ["build", "test"]);
+gulp.task("default", gulp.series("build", "test"));
