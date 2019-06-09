@@ -1,6 +1,6 @@
 {
   "name": "elementory",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "A tiny library for constructing HTML elements with JavaScript",
   "main": "elementory.js",
   "directories": {
@@ -21,12 +21,12 @@
   },
   "homepage": "http://elementory.io",
   "devDependencies": {
-    "gulp": "github:gulpjs/gulp#4.0",
+    "gulp": "^4.0.2",
     "gulp-mocha": "^6.0.0",
     "gulp-rename": "^1.4.0",
-    "gulp-uglify": "^3.0.1",
-    "markunit": "^1.0.0",
+    "gulp-uglify": "^3.0.2",
+    "markunit": "^1.0.2",
     "mocha": "^5.2.0",
-    "uglify-js": "^3.4.6"
+    "uglify-js": "^3.6.0"
   }
 }
