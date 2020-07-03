@@ -27,6 +27,6 @@
     "gulp-uglify": "^3.0.2",
     "markunit": "^1.0.4",
     "mocha": "^6.2.2",
-    "uglify-js": "^3.7.2"
+    "uglify-js": "^3.10.0"
   }
 }
