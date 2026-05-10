@@ -1,10 +1,25 @@
 var assert = require("assert");
 var element = require("../elementory.js")
-
-var markunit = require("markunit")
 var fs = require('fs');
+var MarkdownIt = require("markdown-it");
+var cheerio = require("cheerio");
 
-var doc = markunit(fs.readFileSync("./README.md", "utf8"))
+var markdown = new MarkdownIt({ html: true });
+var doc = cheerio.load(markdown.render(fs.readFileSync("./README.md", "utf8")));
+
+function codeText() {
+  var output = [];
+  doc("code").each(function(index, element) {
+    output.push(doc(element).text());
+  });
+  return output.join("\n");
+}
+
+function copyText() {
+  var copy = doc.root().clone();
+  copy.find("code").remove();
+  return copy.text();
+}
 
 describe("Library", function(){
 
@@ -83,27 +98,27 @@ describe("Library", function(){
 describe("Documentation", function(){
 
   it("should contain at least one h1", function(){
-    doc.markup.has("h1")
+    assert.ok(doc("h1").length > 0)
   })
 
   it("should contain at least one h2", function(){
-    doc.markup.has("h2")
+    assert.ok(doc("h2").length > 0)
   })
 
   it("should not contain double-indented lists", function(){
-    doc.markup.no("li li")
+    assert.equal(doc("li li").length, 0)
   })
 
   it("should not have any curly quotes in code snippets", function(){
-    doc.code.no(["“","”"])
+    assert.equal(/[“”]/.test(codeText()), false)
   })
 
   it("should not have the library's name in lower-case form in the copy", function(){
-    doc.copy.no("elementory")
+    assert.equal(copyText().indexOf("elementory"), -1)
   })
 
   it("should contain installation instructions", function(){
-    doc.code.has("npm install")
+    assert.notEqual(codeText().indexOf("npm install"), -1)
   })
 
 })

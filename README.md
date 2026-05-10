@@ -2,7 +2,7 @@
 
 Elementory is a tiny library for constructing HTML elements with JavaScript.
 
-[![Build Status](https://dev.azure.com/agorischek/packages/_apis/build/status/Elementory/Elementory%20CI?branchName=master)](https://dev.azure.com/agorischek/packages/_build?definitionScope=%5CElementory)
+[![CI](https://github.com/agorischek/elementory/actions/workflows/ci.yml/badge.svg)](https://github.com/agorischek/elementory/actions/workflows/ci.yml)
 [![Dependencies](https://img.shields.io/depfu/agorischek/elementory.svg)](https://depfu.com/repos/agorischek/elementory)
 [![Version](https://img.shields.io/npm/v/elementory.svg)](https://www.npmjs.com/package/elementory)
 [![License](https://img.shields.io/github/license/agorischek/elementory.svg)](https://github.com/agorischek/elementory/blob/master/LICENSE)
@@ -51,6 +51,10 @@ $ npm install -S elementory
 ```js
 var element = require("elementory");
 ```
+
+## Publishing
+
+Releases are published by the [Publish Package](https://github.com/agorischek/elementory/actions/workflows/publish.yml) GitHub Actions workflow using npm Trusted Publishing.
 
 ## Basic Usage
 
