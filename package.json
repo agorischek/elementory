@@ -23,7 +23,7 @@
   "devDependencies": {
     "cheerio": "^1.2.0",
     "markdown-it": "^14.1.1",
-    "vitest": "^4.1.5",
-    "uglify-js": "^3.19.3"
+    "uglify-js": "^3.19.3",
+    "vitest": "^4.1.8"
   }
 }
