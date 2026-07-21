@@ -3,7 +3,6 @@
 Elementory is a tiny library for constructing HTML elements with JavaScript.
 
 [![CI](https://github.com/agorischek/elementory/actions/workflows/ci.yml/badge.svg)](https://github.com/agorischek/elementory/actions/workflows/ci.yml)
-[![Dependencies](https://img.shields.io/depfu/agorischek/elementory.svg)](https://depfu.com/repos/agorischek/elementory)
 [![Version](https://img.shields.io/npm/v/elementory.svg)](https://www.npmjs.com/package/elementory)
 [![License](https://img.shields.io/github/license/agorischek/elementory.svg)](https://github.com/agorischek/elementory/blob/master/LICENSE)
 
